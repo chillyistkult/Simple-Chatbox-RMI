@@ -67,7 +67,7 @@ public class Server extends UnicastRemoteObject implements IServer {
 	@Override
 	public void removeClient(IClient client) throws RemoteException {
 		clients.remove(client);
-        client.showMessage(client.getName() + " is gone!");
+        this.broadcast(client.getName() + " is gone!");
 	}
 	
 	@Override
