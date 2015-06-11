@@ -53,6 +53,7 @@ public class Server extends UnicastRemoteObject implements IServer {
 				else{
 					client.setLoginState(true);
 					clients.add(client);
+                    this.broadcast(client.getName() + " entered the chat!");
 					break;
 				}
 			}
@@ -66,7 +67,7 @@ public class Server extends UnicastRemoteObject implements IServer {
 	@Override
 	public void removeClient(IClient client) throws RemoteException {
 		clients.remove(client);
-        client.showMessage(client.getName() + " is gone");
+        client.showMessage(client.getName() + " is gone!");
 	}
 	
 	@Override
