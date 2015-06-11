@@ -51,6 +51,7 @@ public class Main {
     }
 
     public static void menu() {
+        // Kann nach belieben noch erweitert werden
         System.out.println("Messages:");
     }
 
